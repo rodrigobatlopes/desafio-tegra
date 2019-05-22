@@ -35,6 +35,9 @@ public class UberAirServiceImpl implements UberAirService {
 	public List<Voo> loadUberAirFlights() throws FileNotFoundException, IOException {
 		log.info("Load UberAir Flights started");
 		List<List<String>> records = new ArrayList<>();
+		
+		
+		
 		try (BufferedReader br = new BufferedReader(new FileReader("./csv/uberair.csv"))) {
 		    String line;
 		    while ((line = br.readLine()) != null) {

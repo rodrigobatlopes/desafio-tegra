@@ -12,6 +12,9 @@ import br.com.rodrigolopes.desafioTegra.service.AirportService;
 import lombok.extern.slf4j.Slf4j;
 
 
+
+
+
 @RestController
 @RequestMapping("/airports")
 @Slf4j
