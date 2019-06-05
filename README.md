@@ -1,4 +1,4 @@
-# Desafio Tegra (Rodrigo Lopes - Teste de Backend: Criar a API)
+# (Rodrigo Lopes - Teste de Backend: Criar a API)
 O Projeto foi desenvolvido em Java 8 utilizando o Framework SpringBoot, optei por fazer apenas a parte de BackEnd do mesmo.
 
 - Para subir a aplicação basta importar o diretorio desafioTegra como um Maven Project no Eclipse.
