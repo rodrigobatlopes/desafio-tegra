@@ -38,6 +38,7 @@ public class AirportRestController {
     	}	
     }      
     
+    @Autowired
     MessageChannel providerMessageChannel;
     
     @PostMapping(value = "/new",
