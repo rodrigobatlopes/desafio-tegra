@@ -1,6 +1,6 @@
 package br.com.rodrigolopes.desafioTegra.domain;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.google.gson.GsonBuilder;
 
 import lombok.AllArgsConstructor;

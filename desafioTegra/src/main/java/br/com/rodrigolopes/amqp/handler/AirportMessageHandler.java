@@ -20,8 +20,11 @@ public class AirportMessageHandler implements MessageHandler {
 
 
 	public void handleMessage(Message<?> message) throws MessagingException {
-		log.info(" Log Start ", message.toString());  
+		log.info("inicio handler" );
+		log.info("message.toString=" + message.toString());  
+		log.info("message.getPayload=" + message.getPayload().toString()); 
         Aeroporto aeroportoQueue = (Aeroporto) message.getPayload();
+        log.info("fim handler" );
         log.info(" Log End ", aeroportoQueue.toString());        
   
     }
