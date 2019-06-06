@@ -44,6 +44,7 @@ public class AirportRestController {
     	}	
     }      
     
+    @Autowired
     MessageChannel providerMessageChannel;
     
 	@ApiOperation(value="Cadastra um novo Aeroporto")

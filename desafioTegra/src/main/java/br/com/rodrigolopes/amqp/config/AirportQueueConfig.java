@@ -1,6 +1,9 @@
 package br.com.rodrigolopes.amqp.config;
 
+import org.springframework.amqp.core.AmqpAdmin;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -26,7 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class AirportQueueConfig {
 
-	 @Autowired
+	@Autowired
     private ConnectionFactory rabbitConnectionFactory;
 	 
 	 @Autowired
@@ -55,6 +58,12 @@ public class AirportQueueConfig {
         });
     }
     
+    @Bean
+    public AmqpAdmin amqpAdmin() {
+    	RabbitAdmin rabbitAdmin = new RabbitAdmin(rabbitConnectionFactory);
+    	rabbitAdmin.declareQueue(new Queue("q.airplanes"));
+    	return rabbitAdmin;
+    }
     
     // PUBLISHER
     @Bean
